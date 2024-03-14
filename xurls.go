@@ -192,8 +192,8 @@ func publicExp() string {
 	webURL := hostName + port + `(?:/` + pathCont + `|/)?`
 
 	schemes := `(?:(?i)(?:` + anyOf(WebSchemes...) + `)://)`
-
-	return schemes + pathCont + webURL + `|` + webURL
+	email := `(?P<relaxedEmail>[a-zA-Z0-9._%\-+]+@` + domain + `)`
+	return schemes + pathCont + webURL + `|` + webURL + `|` + email
 }
 
 // Strict produces a regexp that matches any URL with a scheme in either the
