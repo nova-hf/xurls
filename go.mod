@@ -1,4 +1,4 @@
-module mvdan.cc/xurls/v2
+module github.com/nova-hf/xurls/v2
 
 go 1.20
 
