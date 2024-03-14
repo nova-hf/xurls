@@ -380,3 +380,8 @@ var Schemes = []string{
 	`z39.50r`,
 	`z39.50s`,
 }
+
+var WebSchemes = []string{
+	`http`,
+	`https`,
+}
