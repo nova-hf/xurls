@@ -6,7 +6,7 @@ package xurls_test
 import (
 	"fmt"
 
-	"mvdan.cc/xurls/v2"
+	"github.com/nova-hf/xurls/v2"
 )
 
 func Example() {
@@ -31,7 +31,9 @@ func ExampleStrictMatchingScheme() {
 func Example_filterEmails() {
 	s := "Email dev@foo.com about any issues with foo.com or https://foo.com/dl"
 	rx := xurls.Relaxed()
+	fmt.Println(rx)
 	idxEmail := rx.SubexpIndex("relaxedEmail")
+	fmt.Println(idxEmail)
 	for _, match := range rx.FindAllStringSubmatch(s, -1) {
 		if match[idxEmail] != "" {
 			continue // skip lone email addresses
